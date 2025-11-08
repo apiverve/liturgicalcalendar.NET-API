@@ -4,4059 +4,4312 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("dateArgs")]
-    public int[] dateArgs { get; set; }
+        [JsonProperty("dateArgs")]
+        public int[] DateArgs { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-}
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+    }
+    /// <summary>
+    /// 20250301 data
+    /// </summary>
+    public class 20250301
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-}
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-public class 20250301
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("dateArgs")]
+        public int[] DateArgs { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("dateArgs")]
-    public int[] dateArgs { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-}
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+    }
+    /// <summary>
+    /// 20250302 data
+    /// </summary>
+    public class 20250302
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-}
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-}
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-public class 20250302
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("dateArgs")]
+        public int[] DateArgs { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-}
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("dateArgs")]
-    public int[] dateArgs { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-}
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+    }
+    /// <summary>
+    /// 20250303 data
+    /// </summary>
+    public class 20250303
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-}
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-}
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-public class 20250303
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("dateArgs")]
+        public int[] DateArgs { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-}
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("dateArgs")]
-    public int[] dateArgs { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-}
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+    }
+    /// <summary>
+    /// 20250304 data
+    /// </summary>
+    public class 20250304
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-}
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-}
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-public class 20250304
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-}
+    }
+    /// <summary>
+    /// 20250305 data
+    /// </summary>
+    public class 20250305
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-}
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-}
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-}
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-public class 20250305
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+    }
+    /// <summary>
+    /// 20250306 data
+    /// </summary>
+    public class 20250306
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-}
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-}
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-}
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-}
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-public class 20250306
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+    }
+    /// <summary>
+    /// 20250307 data
+    /// </summary>
+    public class 20250307
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-}
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-}
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-}
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-}
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-public class 20250307
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+    }
+    /// <summary>
+    /// 20250308 data
+    /// </summary>
+    public class 20250308
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-}
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-}
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-}
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-}
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-public class 20250308
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+    }
+    /// <summary>
+    /// 20250309 data
+    /// </summary>
+    public class 20250309
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-}
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-}
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-}
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-}
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-public class 20250309
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+    }
+    /// <summary>
+    /// 20250310 data
+    /// </summary>
+    public class 20250310
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-}
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-}
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+    }
+    /// <summary>
+    /// 20250311 data
+    /// </summary>
+    public class 20250311
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-}
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-public class 20250310
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-}
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-}
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-}
+    }
+    /// <summary>
+    /// 20250312 data
+    /// </summary>
+    public class 20250312
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-}
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-public class 20250311
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-}
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-}
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+    }
+    /// <summary>
+    /// 20250313 data
+    /// </summary>
+    public class 20250313
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-}
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-}
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-public class 20250312
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-}
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-}
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+    }
+    /// <summary>
+    /// 20250314 data
+    /// </summary>
+    public class 20250314
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-}
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-}
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-public class 20250313
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-}
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+    }
+    /// <summary>
+    /// 20250315 data
+    /// </summary>
+    public class 20250315
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-}
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-}
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-}
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-public class 20250314
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+    }
+    /// <summary>
+    /// 20250316 data
+    /// </summary>
+    public class 20250316
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-}
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-}
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-}
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-}
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-public class 20250315
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+    }
+    /// <summary>
+    /// 20250317 data
+    /// </summary>
+    public class 20250317
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-}
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-}
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-}
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-}
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-public class 20250316
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+    }
+    /// <summary>
+    /// 20250318 data
+    /// </summary>
+    public class 20250318
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-}
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-}
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("month")]
+        public int Month { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("date")]
+        public int Date { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+    }
+    /// <summary>
+    /// SetDate data
+    /// </summary>
+    public class SetDate
+    {
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-}
+    }
+    /// <summary>
+    /// DateExceptions data
+    /// </summary>
+    public class DateExceptions
+    {
+        [JsonProperty("ifIsDayOfWeek")]
+        public int IfIsDayOfWeek { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("setDate")]
+        public SetDate SetDate { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-}
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-public class 20250317
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+    }
+    /// <summary>
+    /// 20250319 data
+    /// </summary>
+    public class 20250319
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("dateExceptions")]
+        public DateExceptions[] DateExceptions { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-}
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("commonsDef")]
+        public string[] CommonsDef { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-}
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-}
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-}
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-public class 20250318
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+    }
+    /// <summary>
+    /// 20250320 data
+    /// </summary>
+    public class 20250320
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-}
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("month")]
-    public int month { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("date")]
-    public int date { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-}
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-public class setDate
-{
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-}
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-public class dateExceptions
-{
-    [JsonProperty("ifIsDayOfWeek")]
-    public int ifIsDayOfWeek { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("setDate")]
-    public setDate setDate { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-}
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+    }
+    /// <summary>
+    /// 20250321 data
+    /// </summary>
+    public class 20250321
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-}
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-public class 20250319
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public dateExceptions[] dateExceptions { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public string[] commonsDef { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-}
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+    }
+    /// <summary>
+    /// 20250322 data
+    /// </summary>
+    public class 20250322
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-}
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-}
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-public class 20250320
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-}
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-}
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+    }
+    /// <summary>
+    /// 20250323 data
+    /// </summary>
+    public class 20250323
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-}
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-}
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-public class 20250321
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-}
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-}
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+    }
+    /// <summary>
+    /// 20250324 data
+    /// </summary>
+    public class 20250324
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-}
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-}
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-public class 20250322
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+    }
+    /// <summary>
+    /// 20250325 data
+    /// </summary>
+    public class 20250325
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-}
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-}
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("commonsDef")]
+        public string[] CommonsDef { get; set; }
 
-}
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-}
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-public class 20250323
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+    }
+    /// <summary>
+    /// 20250326 data
+    /// </summary>
+    public class 20250326
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-}
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-}
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-}
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-public class 20250324
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+    }
+    /// <summary>
+    /// 20250327 data
+    /// </summary>
+    public class 20250327
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-}
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-}
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-}
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-}
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-public class 20250325
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+    }
+    /// <summary>
+    /// 20250328 data
+    /// </summary>
+    public class 20250328
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public string[] commonsDef { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-}
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-}
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-}
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-}
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-public class 20250326
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+    }
+    /// <summary>
+    /// 20250329 data
+    /// </summary>
+    public class 20250329
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-}
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-}
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-}
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-}
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-public class 20250327
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+    }
+    /// <summary>
+    /// 20250330 data
+    /// </summary>
+    public class 20250330
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-}
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+    }
+    /// <summary>
+    /// DateDef data
+    /// </summary>
+    public class DateDef
+    {
+        [JsonProperty("dateFn")]
+        public string DateFn { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("addDay")]
+        public int AddDay { get; set; }
 
-}
+        [JsonProperty("yearOffset")]
+        public int YearOffset { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+    }
+    /// <summary>
+    /// Calendar data
+    /// </summary>
+    public class Calendar
+    {
+        [JsonProperty("weekOfSeason")]
+        public int WeekOfSeason { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("dayOfSeason")]
+        public int DayOfSeason { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("dayOfWeek")]
+        public int DayOfWeek { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("nthDayOfWeekInMonth")]
+        public int NthDayOfWeekInMonth { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("startOfSeason")]
+        public string StartOfSeason { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("endOfSeason")]
+        public string EndOfSeason { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("startOfLiturgicalYear")]
+        public string StartOfLiturgicalYear { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("endOfLiturgicalYear")]
+        public string EndOfLiturgicalYear { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Cycles data
+    /// </summary>
+    public class Cycles
+    {
+        [JsonProperty("properCycle")]
+        public string ProperCycle { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("sundayCycle")]
+        public string SundayCycle { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("weekdayCycle")]
+        public string WeekdayCycle { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("psalterWeek")]
+        public string PsalterWeek { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+    }
+    /// <summary>
+    /// 20250331 data
+    /// </summary>
+    public class 20250331
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-}
+        [JsonProperty("date")]
+        public string Date { get; set; }
 
-public class 20250328
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("dateDef")]
+        public DateDef DateDef { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("dateExceptions")]
+        public object[] DateExceptions { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("alternativeTransferDateDefs")]
+        public object[] AlternativeTransferDateDefs { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("precedence")]
+        public string Precedence { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("rank")]
+        public string Rank { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("allowSimilarRankItems")]
+        public bool AllowSimilarRankItems { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("isHolyDayOfObligation")]
+        public bool IsHolyDayOfObligation { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("isOptional")]
+        public bool IsOptional { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("i18nDef")]
+        public string[] I18nDef { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+        [JsonProperty("seasons")]
+        public string[] Seasons { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("periods")]
+        public string[] Periods { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("colors")]
+        public string[] Colors { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
+        [JsonProperty("commonsDef")]
+        public object[] CommonsDef { get; set; }
 
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
+        [JsonProperty("martyrology")]
+        public object[] Martyrology { get; set; }
 
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
+        [JsonProperty("titles")]
+        public object[] Titles { get; set; }
 
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
+        [JsonProperty("calendar")]
+        public Calendar Calendar { get; set; }
 
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
+        [JsonProperty("cycles")]
+        public Cycles Cycles { get; set; }
 
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
+        [JsonProperty("fromCalendarId")]
+        public string FromCalendarId { get; set; }
 
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
+        [JsonProperty("fromExtendedCalendars")]
+        public object[] FromExtendedCalendars { get; set; }
 
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
+    }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("2025-03-01")]
+        public 20250301[] 20250301 { get; set; }
 
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
+        [JsonProperty("2025-03-02")]
+        public 20250302[] 20250302 { get; set; }
 
-}
+        [JsonProperty("2025-03-03")]
+        public 20250303[] 20250303 { get; set; }
 
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
+        [JsonProperty("2025-03-04")]
+        public 20250304[] 20250304 { get; set; }
 
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
+        [JsonProperty("2025-03-05")]
+        public 20250305[] 20250305 { get; set; }
 
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
+        [JsonProperty("2025-03-06")]
+        public 20250306[] 20250306 { get; set; }
 
-}
+        [JsonProperty("2025-03-07")]
+        public 20250307[] 20250307 { get; set; }
 
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
+        [JsonProperty("2025-03-08")]
+        public 20250308[] 20250308 { get; set; }
 
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
+        [JsonProperty("2025-03-09")]
+        public 20250309[] 20250309 { get; set; }
 
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
+        [JsonProperty("2025-03-10")]
+        public 20250310[] 20250310 { get; set; }
 
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
+        [JsonProperty("2025-03-11")]
+        public 20250311[] 20250311 { get; set; }
 
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
+        [JsonProperty("2025-03-12")]
+        public 20250312[] 20250312 { get; set; }
 
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
+        [JsonProperty("2025-03-13")]
+        public 20250313[] 20250313 { get; set; }
 
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
+        [JsonProperty("2025-03-14")]
+        public 20250314[] 20250314 { get; set; }
 
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
+        [JsonProperty("2025-03-15")]
+        public 20250315[] 20250315 { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("2025-03-16")]
+        public 20250316[] 20250316 { get; set; }
 
-}
+        [JsonProperty("2025-03-17")]
+        public 20250317[] 20250317 { get; set; }
 
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
+        [JsonProperty("2025-03-18")]
+        public 20250318[] 20250318 { get; set; }
 
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
+        [JsonProperty("2025-03-19")]
+        public 20250319[] 20250319 { get; set; }
 
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
+        [JsonProperty("2025-03-20")]
+        public 20250320[] 20250320 { get; set; }
 
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
+        [JsonProperty("2025-03-21")]
+        public 20250321[] 20250321 { get; set; }
 
-}
+        [JsonProperty("2025-03-22")]
+        public 20250322[] 20250322 { get; set; }
 
-public class 20250329
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
+        [JsonProperty("2025-03-23")]
+        public 20250323[] 20250323 { get; set; }
 
-    [JsonProperty("date")]
-    public string date { get; set; }
+        [JsonProperty("2025-03-24")]
+        public 20250324[] 20250324 { get; set; }
 
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
+        [JsonProperty("2025-03-25")]
+        public 20250325[] 20250325 { get; set; }
 
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
+        [JsonProperty("2025-03-26")]
+        public 20250326[] 20250326 { get; set; }
 
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
+        [JsonProperty("2025-03-27")]
+        public 20250327[] 20250327 { get; set; }
 
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
+        [JsonProperty("2025-03-28")]
+        public 20250328[] 20250328 { get; set; }
 
-    [JsonProperty("rank")]
-    public string rank { get; set; }
+        [JsonProperty("2025-03-29")]
+        public 20250329[] 20250329 { get; set; }
 
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
+        [JsonProperty("2025-03-30")]
+        public 20250330[] 20250330 { get; set; }
 
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
+        [JsonProperty("2025-03-31")]
+        public 20250331[] 20250331 { get; set; }
 
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
-
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
-
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
-
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
-
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
-
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
-
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
-
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
-
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
-
-}
-
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
-
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
-
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
-
-}
-
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
-
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
-
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
-
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
-
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
-
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
-
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
-
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
-
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
-
-}
-
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
-
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
-
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
-
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
-
-}
-
-public class 20250330
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
-
-    [JsonProperty("date")]
-    public string date { get; set; }
-
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
-
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
-
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
-
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
-
-    [JsonProperty("rank")]
-    public string rank { get; set; }
-
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
-
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
-
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
-
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
-
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
-
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
-
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
-
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
-
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
-
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
-
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
-
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
-
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
-
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
-
-}
-
-public class dateDef
-{
-    [JsonProperty("dateFn")]
-    public string dateFn { get; set; }
-
-    [JsonProperty("addDay")]
-    public int addDay { get; set; }
-
-    [JsonProperty("yearOffset")]
-    public int yearOffset { get; set; }
-
-}
-
-public class calendar
-{
-    [JsonProperty("weekOfSeason")]
-    public int weekOfSeason { get; set; }
-
-    [JsonProperty("dayOfSeason")]
-    public int dayOfSeason { get; set; }
-
-    [JsonProperty("dayOfWeek")]
-    public int dayOfWeek { get; set; }
-
-    [JsonProperty("nthDayOfWeekInMonth")]
-    public int nthDayOfWeekInMonth { get; set; }
-
-    [JsonProperty("startOfSeason")]
-    public string startOfSeason { get; set; }
-
-    [JsonProperty("endOfSeason")]
-    public string endOfSeason { get; set; }
-
-    [JsonProperty("startOfLiturgicalYear")]
-    public string startOfLiturgicalYear { get; set; }
-
-    [JsonProperty("endOfLiturgicalYear")]
-    public string endOfLiturgicalYear { get; set; }
-
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
-
-}
-
-public class cycles
-{
-    [JsonProperty("properCycle")]
-    public string properCycle { get; set; }
-
-    [JsonProperty("sundayCycle")]
-    public string sundayCycle { get; set; }
-
-    [JsonProperty("weekdayCycle")]
-    public string weekdayCycle { get; set; }
-
-    [JsonProperty("psalterWeek")]
-    public string psalterWeek { get; set; }
-
-}
-
-public class 20250331
-{
-    [JsonProperty("id")]
-    public string id { get; set; }
-
-    [JsonProperty("date")]
-    public string date { get; set; }
-
-    [JsonProperty("dateDef")]
-    public dateDef dateDef { get; set; }
-
-    [JsonProperty("dateExceptions")]
-    public object[] dateExceptions { get; set; }
-
-    [JsonProperty("alternativeTransferDateDefs")]
-    public object[] alternativeTransferDateDefs { get; set; }
-
-    [JsonProperty("precedence")]
-    public string precedence { get; set; }
-
-    [JsonProperty("rank")]
-    public string rank { get; set; }
-
-    [JsonProperty("allowSimilarRankItems")]
-    public bool allowSimilarRankItems { get; set; }
-
-    [JsonProperty("isHolyDayOfObligation")]
-    public bool isHolyDayOfObligation { get; set; }
-
-    [JsonProperty("isOptional")]
-    public bool isOptional { get; set; }
-
-    [JsonProperty("i18nDef")]
-    public string[] i18nDef { get; set; }
-
-    [JsonProperty("seasons")]
-    public string[] seasons { get; set; }
-
-    [JsonProperty("periods")]
-    public string[] periods { get; set; }
-
-    [JsonProperty("colors")]
-    public string[] colors { get; set; }
-
-    [JsonProperty("commonsDef")]
-    public object[] commonsDef { get; set; }
-
-    [JsonProperty("martyrology")]
-    public object[] martyrology { get; set; }
-
-    [JsonProperty("titles")]
-    public object[] titles { get; set; }
-
-    [JsonProperty("calendar")]
-    public calendar calendar { get; set; }
-
-    [JsonProperty("cycles")]
-    public cycles cycles { get; set; }
-
-    [JsonProperty("fromCalendarId")]
-    public string fromCalendarId { get; set; }
-
-    [JsonProperty("fromExtendedCalendars")]
-    public object[] fromExtendedCalendars { get; set; }
-
-}
-
-public class data
-{
-    [JsonProperty("2025-03-01")]
-    public 20250301[] 20250301 { get; set; }
-
-    [JsonProperty("2025-03-02")]
-    public 20250302[] 20250302 { get; set; }
-
-    [JsonProperty("2025-03-03")]
-    public 20250303[] 20250303 { get; set; }
-
-    [JsonProperty("2025-03-04")]
-    public 20250304[] 20250304 { get; set; }
-
-    [JsonProperty("2025-03-05")]
-    public 20250305[] 20250305 { get; set; }
-
-    [JsonProperty("2025-03-06")]
-    public 20250306[] 20250306 { get; set; }
-
-    [JsonProperty("2025-03-07")]
-    public 20250307[] 20250307 { get; set; }
-
-    [JsonProperty("2025-03-08")]
-    public 20250308[] 20250308 { get; set; }
-
-    [JsonProperty("2025-03-09")]
-    public 20250309[] 20250309 { get; set; }
-
-    [JsonProperty("2025-03-10")]
-    public 20250310[] 20250310 { get; set; }
-
-    [JsonProperty("2025-03-11")]
-    public 20250311[] 20250311 { get; set; }
-
-    [JsonProperty("2025-03-12")]
-    public 20250312[] 20250312 { get; set; }
-
-    [JsonProperty("2025-03-13")]
-    public 20250313[] 20250313 { get; set; }
-
-    [JsonProperty("2025-03-14")]
-    public 20250314[] 20250314 { get; set; }
-
-    [JsonProperty("2025-03-15")]
-    public 20250315[] 20250315 { get; set; }
-
-    [JsonProperty("2025-03-16")]
-    public 20250316[] 20250316 { get; set; }
-
-    [JsonProperty("2025-03-17")]
-    public 20250317[] 20250317 { get; set; }
-
-    [JsonProperty("2025-03-18")]
-    public 20250318[] 20250318 { get; set; }
-
-    [JsonProperty("2025-03-19")]
-    public 20250319[] 20250319 { get; set; }
-
-    [JsonProperty("2025-03-20")]
-    public 20250320[] 20250320 { get; set; }
-
-    [JsonProperty("2025-03-21")]
-    public 20250321[] 20250321 { get; set; }
-
-    [JsonProperty("2025-03-22")]
-    public 20250322[] 20250322 { get; set; }
-
-    [JsonProperty("2025-03-23")]
-    public 20250323[] 20250323 { get; set; }
-
-    [JsonProperty("2025-03-24")]
-    public 20250324[] 20250324 { get; set; }
-
-    [JsonProperty("2025-03-25")]
-    public 20250325[] 20250325 { get; set; }
-
-    [JsonProperty("2025-03-26")]
-    public 20250326[] 20250326 { get; set; }
-
-    [JsonProperty("2025-03-27")]
-    public 20250327[] 20250327 { get; set; }
-
-    [JsonProperty("2025-03-28")]
-    public 20250328[] 20250328 { get; set; }
-
-    [JsonProperty("2025-03-29")]
-    public 20250329[] 20250329 { get; set; }
-
-    [JsonProperty("2025-03-30")]
-    public 20250330[] 20250330 { get; set; }
-
-    [JsonProperty("2025-03-31")]
-    public 20250331[] 20250331 { get; set; }
-
-}
-
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
-
-    [JsonProperty("error")]
-    public object error { get; set; }
-
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
